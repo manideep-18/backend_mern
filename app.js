@@ -21,7 +21,10 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(cors())
 
+//MY routes
 app.use("/api",authRoutes)
+// app.use("/api",user)
+
 
 const port=process.env.PORT || 8000
 
