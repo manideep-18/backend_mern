@@ -17,3 +17,15 @@ exports.getUser=(req,res)=>{
     req.profile.encry_password=undefined
     return res.json(req.profile)
 }
+
+exports.getUsersDetails=(req,res)=>{
+    User.find().exec((err,users)=>{
+        if(err || !users){
+            return res.status(403).json({
+                error:'No users found'
+            })
+        }
+       return res.json(users)
+
+    })
+}
