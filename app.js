@@ -7,6 +7,8 @@ const cookieParser = require('cookie-parser')
 const cors = require("cors")
 
 const authRoutes=require("./routes/auth");
+const userRoutes=require("./routes/user");
+
 
 const app=express()
 
@@ -23,7 +25,7 @@ app.use(cors())
 
 //MY routes
 app.use("/api",authRoutes)
-// app.use("/api",user)
+app.use("/api",userRoutes)
 
 
 const port=process.env.PORT || 8000
