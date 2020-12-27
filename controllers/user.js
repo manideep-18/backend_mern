@@ -13,5 +13,7 @@ exports.getUserById  = (req,res,next,id)=>{
 }
 
 exports.getUser=(req,res)=>{
-    return req.json(req.profile)
+    req.profile.salt=undefined
+    req.profile.encry_password=undefined
+    return res.json(req.profile)
 }
