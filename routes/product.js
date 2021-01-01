@@ -1,6 +1,6 @@
 const express=require('express')
 const { isSignedIn, isAuthenticated, isAdmin } = require('../controllers/auth')
-const { getProductById } = require('../controllers/product')
+const { getProductById, createProduct } = require('../controllers/product')
 const { getUserById } = require('../controllers/user')
 const router=express.Router()
 
