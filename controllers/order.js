@@ -40,3 +40,11 @@ exports.getAllOrders=(req,res)=>{
         res.json(orders)
     })
 }
+
+exports.getOrderStatus=(req,res)=>{
+    res.json(Order.schema.path("status").enumValues)
+}
+
+exports.updateStatus=(req,res)=>{
+
+}
