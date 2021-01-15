@@ -12,7 +12,7 @@ exports.getProductById=(req,res,next,id)=>{
                 error:'No product found in DB'
             })
         }
-        res.product=product
+        req.product=product
         next()
     })
 }
